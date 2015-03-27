@@ -1,4 +1,4 @@
-nps_setup() {
+np_setup() {
 
 	chmod +x /usr/local/np-cli/np && ln -s /usr/local/np-cli/np /usr/bin/np
 
