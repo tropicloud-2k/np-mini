@@ -25,7 +25,7 @@ nps_setup() {
 	# NP USER
 	# ------------------------
 		
- 	useradd -g nginx -d $home npuser
+ 	adduser -G nginx -h $home -D npuser
  	echo "source /etc/environment" >> $home/.bashrc
   	chown root:root $home && chmod 755 $home
 
@@ -65,7 +65,6 @@ EOF
 	openssl req -nodes -sha256 -newkey rsa:2048 -keyout app.key -out app.csr -config openssl.conf -batch
 	openssl rsa -in app.key -out app.key
 	openssl x509 -req -days 365 -sha256 -in app.csr -signkey app.key -out app.crt
-	openssl dhparam -out dhparam.pem 4096
 
 	rm -f openssl.conf
 	
