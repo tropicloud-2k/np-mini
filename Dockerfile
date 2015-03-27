@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:edge
+FROM gliderlabs/alpine:3.1
 MAINTAINER "Guigo2k" <hello@guigo.pw>
 
 ADD np-cli /usr/local/np-cli
